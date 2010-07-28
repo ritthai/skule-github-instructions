@@ -84,7 +84,7 @@ You should be doing all testing, etc. locally. Frequently push to origin (GitHub
 
     git push origin master
 
-When you're ready to push to the production server (ie. make it live on *.skule.ca), just run:
+When you're ready to push to the production server (ie. make it live on \*.skule.ca), just run:
 
     git push web master
 
