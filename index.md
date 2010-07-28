@@ -37,7 +37,6 @@ Now, there are two ways to develop: being a casual developer or a project develo
 3) Be a Casual Developer
 -------------------------
 
-The key difference between a casual developer and project developer is that a project developer access to the production server. 
 As a casual developer, you can dive right in and make fixes... but a project developer will have to check them before they get accepted.
 
 ### 3.a) Fork the Repo
@@ -58,8 +57,9 @@ On your computer, run:
 4) Be a Project Developer
 -------------------------
 
-Instead of having to make pull requests, project developers have direct access to the skule repo.
+Instead of having to make pull requests, project developers have direct access to the skule repo. 
 To get access, message [rafd](http://github.com/rafd) and include which projects you're interested in.
+Project developers can also deploy to the production server (see below).
 
 ### 4.a) Clone the Repo
 
@@ -72,7 +72,7 @@ Now you can pull, push, etc. to the skule repo.
 ### 4.b) Get Access to Production Server
 
 In order to authenticate with the production server, you'll need to [email the sysadmin](mailto:sysadmin@skule.ca) 
-or message rafd your public key (the .pub file you created when setting up your github account).
+or [message rafd](http://github.com/rafd) with your public key (the .pub file you created when setting up your github account).
 
 Once you have confirmation, add the production server repo by running the following: (remember the change ProjectName)
 
@@ -83,6 +83,8 @@ Once you have confirmation, add the production server repo by running the follow
 You should be doing all testing, etc. locally. Frequently push to origin (GitHub) to keep others in the loop, to do so, just run:
 
     git push origin master
+
+### 4.d) Deploy
 
 When you're ready to push to the production server (ie. make it live on \*.skule.ca), just run:
 
