@@ -15,7 +15,7 @@ A list of projects is available on the [skule github page](http://github.com/sku
 --------------
 
 What's git? It's the most awesome [version control system](http://en.wikipedia.org/wiki/Revision_control) ever. 
-If you don't have git installed, had on over to [here](http://git-scm.com/download) and grab one of the binaries. 
+If you don't have git installed, head on over to [here](http://git-scm.com/download) and grab one of the binaries. 
 (If you're on Windows choose the Cygwin version)
 
 Never used Git or a version control system before? 
@@ -32,35 +32,53 @@ Make sure you config your git afterwards:
     git config --global user.name "Your Name"
     git config --global user.email "email.you.signed.up.to.github.with@example.com"
 
-Message [rafd](http://github.com/rafd) so that he can include you in the Skule developers group
-(and include which projects you're interested in). Alternatively, you can develop the 'github way.' (see below)
+Now, there are two ways to develop: being a casual developer or a project developer.
 
+3) Be a Casual Developer
+-------------------------
 
-3) Clone the Repo
------------------
+The key difference between a casual developer and project developer is that a project developer access to the production server. 
+As a casual developer, you can dive right in and make fixes... but a project developer will have to check them before they get accepted.
+
+### 3.a) Fork the Repo
+
+Go to the github project page for the project you want to work on and "fork" the project.
+This will create a personal version of the project for you.
+
+### 3.b) Clone the Repo
+
+On your computer, run:
+
+    git clone git@github.com:YourUser/ProjectName.git
+    
+### 3.c) Make Changes
+
+### 3.d) Commit, Push and Pull Request
+
+4) Be a Project Developer
+-------------------------
+
+Instead of having to make pull requests, project developers have direct access to the skule repo.
+To get access, message [rafd](http://github.com/rafd) and include which projects you're interested in.
+
+### 4.a) Clone the Repo
 
 Once you have confirmation from rafd, you can get a local copy of the repo:
 
     git clone git@github.com:ProjectName.git
 
+Now you can pull, push, etc. to the skule repo.
 
-4) Send Over Your Public Key
------------------------------
+### 4.b) Get Access to Production Server
 
 In order to authenticate with the production server, you'll need to [email the sysadmin](mailto:sysadmin@skule.ca) 
 or message rafd your public key (the .pub file you created when setting up your github account).
 
-
-5) Add the Production Server
-----------------------------
-
-Once you have confirmation, just run the following: (remember the change ProjectName)
+Once you have confirmation, add the production server repo by running the following: (remember the change ProjectName)
 
     git remote add web git@srv.skule.ca:ProjectName.git
 
-
-6) Develop
-----------
+### 4.c) Develop
 
 You should be doing all testing, etc. locally. Frequently push to origin (GitHub) to keep others in the loop, to do so, just run:
 
@@ -71,11 +89,3 @@ When you're ready to push to the production server (ie. make it live on *.skule.
     git push web master
 
 ...and like magic, it's live!
-
-
-
-The GitHub Way
---------------
-
-Instead of joining [the Skule github group](http://github.com/skule), you can contribute by: forking the repo, making your own changes, and then making a pull request (and we'll push to production).
-
