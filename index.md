@@ -32,6 +32,11 @@ Make sure you config your git afterwards:
     git config --global user.name "Your Name"
     git config --global user.email "email.you.signed.up.to.github.with@example.com"
 
+You can confirm that your configuration has changed using:
+
+    git config --get user.name
+    git config --get user.email
+
 Now, there are two ways to develop: being a casual developer or a project developer.
 
 3) Be a Casual Developer
