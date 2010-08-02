@@ -83,13 +83,26 @@ Now you can pull, push, etc. to the skule repo.
 In order to authenticate with the production server, you'll need to [email the sysadmin](mailto:sysadmin@skule.ca) 
 or [message rafd](http://github.com/rafd) with your public key (the .pub file you created when setting up your github account).
 
-Once you have confirmation, add the production server repo by running the following: (remember the change ProjectName)
+Once you have confirmation, add the production server repo.
+
+First, use cd to change to the correct directory.
+
+    cd ProjectName
+
+Example:
+
+    cd SkuleTheme
+
+Then run the following: (remember to change ProjectName)
 
     git remote add web git@srv.skule.ca:ProjectName.git
 
 ### 4.c) Develop
 
-You should be doing all testing, etc. locally. Frequently push to origin (GitHub) to keep others in the loop, to do so, just run:
+You should be doing all testing, etc. locally. Read step 5 for more details about developing locally.
+
+
+Frequently push to origin (GitHub) to keep others in the loop, to do so, just run:
 
     git push origin master
 
