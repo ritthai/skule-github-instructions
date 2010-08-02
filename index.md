@@ -27,9 +27,9 @@ Give [GitRef](http://gitref.org/) and/or [Git for the Lazy](http://www.spheredev
 
 Head on over to [GitHub](http://github.com/) and create an account.
 
-Make sure you config your git afterwards:
+Make sure you config your git afterwards (without the quotes):
 
-    git config --global user.name "Your Name"
+    git config --global user.name "username"
     git config --global user.email "email.you.signed.up.to.github.with@example.com"
 
 You can confirm that your configuration has changed using:
@@ -70,7 +70,11 @@ Project developers can also deploy to the production server (see below).
 
 Once you have confirmation from rafd, you can get a local copy of the repo:
 
-    git clone git@github.com:ProjectName.git
+    git clone git@github.com:username/ProjectName.git
+
+Example:
+
+    git clone git@github.com:skule/SkuleTheme
 
 Now you can pull, push, etc. to the skule repo.
 
