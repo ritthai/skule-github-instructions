@@ -39,10 +39,13 @@ You can confirm that your configuration has changed using:
 
 Now, there are two ways to develop: being a casual developer or a project developer.
 
-3) Be a Casual Developer
--------------------------
+3) Choose Your Style
+--------------------
+There are two ways to contribute: being a [casual developer](casual-development.html) or a [trusted developer](trusted-development.html). Both will let you contribute code: it's mostly a question of commitment and trust.
 
-As a casual developer, you can dive right in and make fixes... but a project developer will have to check them before they get accepted.
+As a [casual developer](casual-development.html), you can dive right in and make fixes... but a trusted developer will have to check them before they get accepted.
+
+[Trusted developers](trusted-development.html) have direct access to the skule github repo, and can also deploy to the production server.
 
 ### 3.a) Fork the Repo
 
