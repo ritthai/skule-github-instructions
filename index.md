@@ -119,6 +119,8 @@ When you're ready to push to the production server (ie. make it live on \*.skule
 -------------------------
 
  -  for everyone new feature/bug fix, create and checkout a branch 
+    first use change to the project directory
+    then
     
     git checkout -b dev-branch-name
 
