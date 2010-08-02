@@ -118,38 +118,52 @@ When you're ready to push to the production server (ie. make it live on \*.skule
 5) Recommended Git Workflow
 -------------------------
 
- -  for everyone new feature/bug fix, create and checkout a branch 
-    first use change to the project directory
-    then
+### 5.a)
+
+for everyone new feature/bug fix, create and checkout a branch 
+first use change to the project directory
+then
     
     git checkout -b dev-branch-name
 
- -  work on said feature in the branch until complete and tested, commit often 
+### 5.b)
+
+work on said feature in the branch until complete and tested, commit often 
 
     git add file-to-add
 
     git commit -am "comment about this commit"
 
- -  update dev branch from master when needed
+### 5.c)
+
+update dev branch from master when needed
 
     git pull origin master
 
     git merge master
 
- -  when complete, switch to master, merge in your dev branch
+### 5.d)
+
+when complete, switch to master, merge in your dev branch
 
     git checkout master
 
     git merge dev-branch-name
 
- -  delete dev branch if needed 
+### 5.e)
+
+delete dev branch if needed 
 
     git branch -d dev-branch-name
 
- -  push to development repo
+### 5.f)
+
+push to development repo
 
     git push origin master
 
- -  push to web
+### 5.g)
+
+push to web
 
     git push web master
