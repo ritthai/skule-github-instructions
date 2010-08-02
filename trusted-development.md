@@ -6,34 +6,51 @@ layout: default
 Be a Trusted Developer
 ---------------------
 
-Instead of having to make pull requests, trusted developers have direct access to the skule repo. 
+Instead of having to make pull requests, project developers have direct access to the skule repo. 
 To get access, message [rafd](http://github.com/rafd) and include which projects you're interested in.
-Trusted developers can also deploy to the production server (see below).
+Project developers can also deploy to the production server (see below).
 
-### a) Clone the Repo
+### 4.a) Clone the Repo
 
 Once you have confirmation from rafd, you can get a local copy of the repo:
 
-    git clone git@github.com:ProjectName.git
+    git clone git@github.com:username/ProjectName.git
+
+Example:
+
+    git clone git@github.com:skule/SkuleTheme
 
 Now you can pull, push, etc. to the skule repo.
 
-### b) Get Access to Production Server
+### 4.b) Get Access to Production Server
 
 In order to authenticate with the production server, you'll need to [email the sysadmin](mailto:sysadmin@skule.ca) 
 or [message rafd](http://github.com/rafd) with your public key (the .pub file you created when setting up your github account).
 
-Once you have confirmation, add the production server repo by running the following: (remember the change ProjectName)
+Once you have confirmation, add the production server repo.
+
+First, use cd to change to the correct directory.
+
+    cd ProjectName
+
+Example:
+
+    cd SkuleTheme
+
+Then run the following: (remember to change ProjectName)
 
     git remote add web git@srv.skule.ca:ProjectName.git
 
-### c) Develop
+### 4.c) Develop
 
-You should be doing all testing, etc. locally. Frequently push to origin (GitHub) to keep others in the loop, to do so, just run:
+You should be doing all testing, etc. locally. Read step 5 for more details about developing locally.
+
+
+Frequently push to origin (GitHub) to keep others in the loop, to do so, just run:
 
     git push origin master
 
-### d) Deploy
+### 4.d) Deploy
 
 When you're ready to push to the production server (ie. make it live on \*.skule.ca), just run:
 
@@ -43,34 +60,54 @@ When you're ready to push to the production server (ie. make it live on \*.skule
 
 
 5) Recommended Git Workflow
+-------------------------
 
- -  for everyone new feature/bug fix, create and checkout a branch 
+### 5.a)
+
+for everyone new feature/bug fix, create and checkout a branch 
+first use change to the project directory
+then
     
-     git checkout -b dev-branch-name
+    git checkout -b dev-branch-name
 
- -  work on said feature in the branch until complete and tested, commit often 
+### 5.b)
 
-     git add file-to-add
-     git commit -am "comment about this commit"
+work on said feature in the branch until complete and tested, commit often 
 
- -  update dev branch from master when needed
+    git add file-to-add
 
-     git pull origin master
-     git merge master
+    git commit -am "comment about this commit"
 
- -  when complete, switch to master, merge in your dev branch
+### 5.c)
 
-     git checkout master
-     git merge dev-branch-name
+update dev branch from master when needed
 
- -  delete dev branch if needed 
+    git pull origin master
 
-     git branch -d dev-branch-name
+    git merge master
 
- -  push to development repo
+### 5.d)
 
-     git push origin master
+when complete, switch to master, merge in your dev branch
 
- -  push to web
+    git checkout master
 
-     git push web master
+    git merge dev-branch-name
+
+### 5.e)
+
+delete dev branch if needed 
+
+    git branch -d dev-branch-name
+
+### 5.f)
+
+push to development repo
+
+    git push origin master
+
+### 5.g)
+
+push to web
+
+    git push web master
