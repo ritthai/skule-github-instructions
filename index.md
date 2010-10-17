@@ -27,6 +27,8 @@ Give [GitRef](http://gitref.org/) and/or [Git for the Lazy](http://www.spheredev
 
 Head on over to [GitHub](http://github.com/) and create an account.
 
+As part of the account creation process you will need to generate an RSA key-pair. Giving GitHub your public key means GitHub can validate that you are the correct user because only you have the corresponding private key and password.
+
 Make sure you config your git afterwards (without the quotes):
 
     git config --global user.name "username"
